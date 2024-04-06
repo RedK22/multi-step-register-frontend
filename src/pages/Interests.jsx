@@ -117,12 +117,12 @@ function Box({imgSrc, text, miniText, isChecked, setIsChecked}) {
           {miniText}
         </div>
         <div className="h-8 grid place-content-center">
-          <input
+          {/* <input
             type="checkbox"
             className="form-checkbox cursor-pointer rounded-full w-4 h-4 outline-none border-none text-pink-600 focus:ring-pink-500 focus:border-pink-500 accent-pink-600"
             onChange={(e) => setIsChecked}
             checked={isChecked}
-          />
+          /> */}
         </div>
       </div>
     </>
