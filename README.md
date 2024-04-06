@@ -1,8 +1,8 @@
-# React + Vite
+# Multi Step Register Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was made with use of React, Tailwind and GSAP(For Animations).
+A single-page React application for a multi-step registration process.
 
-Currently, two official plugins are available:
+Technologies used: React, Tailwind, GSAP.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a clone of dribbble.com and was created as a submission for an internship opportunity.
