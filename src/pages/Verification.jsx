@@ -244,7 +244,7 @@ function Verification() {
         {/* Body */}
         {/*  */}
         <div className="flex flex-1 flex-col justify-center items-center text-center">
-          <div className=" w-[400px] md:w-[700px] flex flex-col justify-center items-center mt-14 p-10 mb-20">
+          <div className=" w-full md:w-[700px] flex flex-col justify-center items-center mt-14 p-10 mb-20">
             <p className="font-semibold text-2xl mb-3">
               Please verify your email...
             </p>
