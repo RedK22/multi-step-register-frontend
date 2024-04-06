@@ -79,6 +79,10 @@ function Box({imgSrc, text, miniText, isChecked, setIsChecked}) {
   const imageRef = useRef(null);
   const isMdScreen = useMediaQuery({query: "(min-width: 768px)"});
 
+  const handleBoxClick = () => {
+    setIsChecked((e) => !e); // Toggle isChecked
+  };
+
   useEffect(() => {
     if (!isMdScreen) return; // Blocking animation for smaller devices.
     if (isChecked) {
@@ -91,7 +95,10 @@ function Box({imgSrc, text, miniText, isChecked, setIsChecked}) {
   return (
     <>
       <div
-        className={`peer w-64 h-80 has-[:checked]:border-pink-600 transition-all mb-4 border-2 border-gray-300 rounded-xl text-center cursor-pointer px-4`}
+        className={`peer w-64 h-80 ${
+          isChecked ? "border-pink-600" : ""
+        } transition-all mb-4 border-2 border-gray-300 rounded-xl text-center cursor-pointer px-4`}
+        onClick={handleBoxClick}
       >
         <div>
           <img
@@ -112,8 +119,9 @@ function Box({imgSrc, text, miniText, isChecked, setIsChecked}) {
         <div className="h-8 grid place-content-center">
           <input
             type="checkbox"
-            className="form-checkbox rounded-full w-4 h-4 outline-none border-none text-pink-600 focus:ring-pink-500 focus:border-pink-500 accent-pink-600"
-            onChange={(e) => setIsChecked(e.target.checked)}
+            className="form-checkbox cursor-pointer rounded-full w-4 h-4 outline-none border-none text-pink-600 focus:ring-pink-500 focus:border-pink-500 accent-pink-600"
+            onChange={(e) => setIsChecked}
+            checked={isChecked}
           />
         </div>
       </div>
